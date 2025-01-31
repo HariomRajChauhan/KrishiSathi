@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 
 function DailyActivity() {
-  // Sample state for the list of daily activities
   const [activities, setActivities] = useState([
     { id: 1, activity: '🌱 Planting Seeds', status: 'Pending' },
     { id: 2, activity: '💧 Watering Crops', status: 'Pending' },
     { id: 3, activity: '🍅 Harvesting Tomatoes', status: 'Pending' },
+    { id: 4, activity: '🌿 Checking Soil Moisture', status: 'Pending' },
+    { id: 5, activity: '🧹 Cleaning Equipment', status: 'Pending' },
+    { id: 6, activity: '🌾 Preparing Soil for Next Planting', status: 'Pending' },
+    { id: 7, activity: '🛠️ Others', status: 'Pending' }, // New activity added
   ]);
 
   // Function to handle the completion of an activity
-  const handleActivityCompletion = (id: number) => {
+  const handleActivityCompletion = (id) => {
     setActivities((prevActivities) =>
       prevActivities.map((activity) =>
         activity.id === id ? { ...activity, status: 'Completed' } : activity

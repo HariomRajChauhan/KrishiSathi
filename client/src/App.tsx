@@ -3,13 +3,10 @@ import NavBar from './components/NavBar';
 import Recent from './components/Recent';
 import DailyActivity from './components/DailyActivity';
 import Profile from './components/Profile';
+import FeedBack from './components/FeedBack';
+import Footer from './components/Footer';
 
-<<<<<<< HEAD
-function App()
-{
-=======
 function App() {
->>>>>>> 1c0ac8b (test)
   return (
     <div className="h-screen w-screen bg-gray-100 p-4">
       {/* NavBar */}
@@ -27,8 +24,20 @@ function App() {
           <Profile />
         </div>
       </div>
-      <div>
-        <Recent/>
+
+      {/* Recent Section */}
+      <div className="mt-6">
+        <Recent />
+      </div>
+
+      {/* Feedback Section */}
+      <div className="mt-6">
+        <FeedBack />
+      </div>
+
+      {/* Footer */}
+      <div className="mt-6">
+        <Footer />
       </div>
     </div>
   );
