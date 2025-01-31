@@ -3,7 +3,8 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
-  { name: 'Incomes and Expenses Tracker', href: '#', current: false },
+  { name: 'Daily Activity Log', href: '#', current: false },
+  { name: 'Income and Expenses Tracker', href: '#', current: false },
   { name: 'Calendar', href: '#', current: false },
 ]
 
