@@ -125,7 +125,7 @@ const Footer = () => {
               </div>
               <button
                 type="submit"
-                className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition duration-200"
+                className="bg-green-600 text-green-600 px-6 py-2 rounded-lg hover:bg-green-700 transition duration-200"
               >
                 Send message
               </button>

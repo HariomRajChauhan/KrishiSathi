@@ -5,6 +5,7 @@ import DailyActivity from './components/DailyActivity';
 import Profile from './components/Profile';
 import FeedBack from './components/FeedBack';
 import Footer from './components/Footer';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
       {/* Footer */}
       <div className="mt-6">
         <Footer />
+      </div>
+      <div>
+        <Login/>
       </div>
     </div>
   );

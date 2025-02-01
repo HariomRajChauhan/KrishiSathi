@@ -38,11 +38,16 @@ const LoginPage: React.FC = () => {
   const [password, setPassword] = useState('');
   const [contactNumber, setContactNumber] = useState('');
   const [countryCode, setCountryCode] = useState('');
+  const [gmail, setGmail] = useState('');
 
   const handleLogin = (event: React.FormEvent) => {
     event.preventDefault();
     // Handle login logic here
-    console.log('Logging in with:', { username, password, contactNumber: `${countryCode}${contactNumber}` });
+    if (gmail) {
+      console.log('Logging in with Gmail:', gmail);
+    } else {
+      console.log('Logging in with:', { username, password, contactNumber: `${countryCode}${contactNumber}` });
+    }
   };
 
   return (
@@ -68,6 +73,16 @@ const LoginPage: React.FC = () => {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+          />
+          
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            label="Gmail"
+            value={gmail}
+            onChange={(e) => setGmail(e.target.value)}
           />
 
           <Grid container spacing={2} alignItems="center">

@@ -13,7 +13,7 @@ const navigation = [
   { name: "Dashboard", href: "#", current: true },
   { name: "Daily Activity Log", href: "#", current: false },
   { name: "Income and Expenses Tracker", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
+  { name: "Crop Calendar", href: "#", current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -22,29 +22,24 @@ function classNames(...classes: string[]) {
 
 export default function Example() {
   return (
-    <Disclosure as="nav" className="bg-green-700">
-      <div className="mx-auto max-w-full px-2 sm:px-6 lg:px-8">
+    <Disclosure as="nav" className="bg-green-700 fixed top-0 left-0 w-full z-50 shadow-lg">
+      <div className="mx-auto max-w-full px-2 sm:px-6 lg:px-4">
         <div className="relative flex h-16 items-center justify-between">
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            {/* Mobile menu button */}
-            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-green-600 hover:text-gray-200 focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset">
+          {/* Centered mobile menu button */}
+          <div className="absolute inset-y-0 left-1/2 transform -translate-x-1/2 sm:hidden">
+            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-green-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none">
               <span className="absolute -inset-0.5" />
               <span className="sr-only">Open main menu</span>
-              <Bars3Icon
-                aria-hidden="true"
-                className="block size-6 group-data-open:hidden"
-              />
-              <XMarkIcon
-                aria-hidden="true"
-                className="hidden size-6 group-data-open:block"
-              />
+              <Bars3Icon className="block h-6 w-6 group-data-open:hidden text-white" aria-hidden="true" />
+              <XMarkIcon className="hidden h-6 w-6 group-data-open:block text-white" aria-hidden="true" />
             </DisclosureButton>
           </div>
+
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
-              <img src="logo.png" className="h-8 w-auto" alt="Logo" />
+              <img src="logo.png" className="h-14 w-auto" alt="Logo" />
               <div className="px-4">
-                <p className="text-lg font-bold text-white">KRISHI SATHI</p>
+                <p className="text-2xl font-bold text-white">KRISHI SATHI</p>
               </div>
             </div>
             <div className="hidden sm:ml-6 sm:block">
@@ -66,6 +61,7 @@ export default function Example() {
               </div>
             </div>
           </div>
+
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button
               type="button"
@@ -73,7 +69,7 @@ export default function Example() {
             >
               <span className="absolute -inset-1.5" />
               <span className="sr-only">View notifications</span>
-              <BellIcon aria-hidden="true" className="size-6" />
+              <BellIcon aria-hidden="true" className="h-6 w-6" />
             </button>
 
             {/* Profile dropdown */}
@@ -85,7 +81,7 @@ export default function Example() {
                   <img
                     alt="User Avatar"
                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    className="size-8 rounded-full"
+                    className="h-8 w-8 rounded-full"
                   />
                 </MenuButton>
               </div>

@@ -48,7 +48,7 @@ function DailyActivity() {
             {activity.status === 'Pending' && (
               <button
                 onClick={() => handleActivityCompletion(activity.id)}
-                className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all duration-200"
+                className="bg-blue-500 text- px-4 py-2 rounded-lg hover:bg-blue-700 transition-all duration-200"
               >
                 ✅ Mark Completed
               </button>
