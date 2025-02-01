@@ -6,6 +6,7 @@ import Profile from './components/Profile';
 import FeedBack from './components/FeedBack';
 import Footer from './components/Footer';
 import Login from './components/Login';
+import Farmer from './components/Farmer';
 
 function App() {
   return (
@@ -40,11 +41,14 @@ function App() {
       <div className="mt-6">
         <Footer />
       </div>
-      <div>
+      <div className='mt-6'>
         <Login/>
+      </div>
+      <div className='mt-6'>
+        <Farmer/>
       </div>
     </div>
   );
 }
-
+ 
 export default App;
